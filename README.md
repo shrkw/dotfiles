@@ -1,8 +1,8 @@
 # shrkw’s dotfiles
 
--zsh
--GNU Screen
--vim
+- Zsh
+- GNU Screen
+- Vim
 
 ## Installation
 
