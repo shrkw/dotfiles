@@ -1,0 +1,33 @@
+########################################################################
+# general
+escape t
+vbell off
+shell zsh
+
+autodetach on
+startup_message off
+defscrollback 4000
+
+########################################################################
+# status
+hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+#hardstatus ignore "%w | %h"
+#caption always " %{= wk} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d(%D) %{=b wb}%c"
+
+########################################################################
+# log
+logfile "$HOME/log/screenlog/%H-%Y%m%d-%c-%n.log"
+deflog on
+logtstamp on
+logtstamp after 600
+
+########################################################################
+# display hardcopy
+hardcopydir "$HOME/log/hardcopy"
+hardcopy_append on
+
+########################################################################
+# japanese input
+defencoding UTF-8
+utf8 on on
+

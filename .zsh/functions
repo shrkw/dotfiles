@@ -1,0 +1,67 @@
+function _d { python ~/Programming/Python/im_get4.py -s -u $1; say finish }
+function d { _d $1 & }
+function _d2 { python ~/Programming/Python/im_get4.py -r -u $1; say finish }
+function d2 { _d2 $1 & }
+function _dn { python ~/Programming/Python/im_get4.py -n 0 -u $1; say finish } 
+function dn { _dn $1 & }
+
+function conv_mp4 { find ~/Downloads/ -depth 1 -type f -name "*.mp4" -exec ffmpeg -i {} -y -acodec copy -vn {}.m4a \; -exec sleep 2 \; }
+function conv_flv { find ~/Downloads/ -depth 1 -type f -name '*.flv' -exec ffmpeg -i {} -acodec copy {}.mp3 \; -exec sleep 2 \; }
+function conv_swf { find ~/Downloads/ -depth 1 -type f -name '*.swf' -exec swfextract -m -o {}.mp3 {} \; }
+
+function zi {
+  cc=`zipinfo -1 $1 | head -1 | nkf -g`
+  echo $cc $1
+  if [ $cc = 'Shift_JIS' ]
+  then
+     an=`zipinfo -1 $1 | head -1 | iconv -f $cc -t UTF-8 | cut -d'/' -f 1`
+     echo "May I rename from $1 to ${an}.zip ? (y/n)"
+     read ans
+     case ${ans} in
+      y)
+       mv $1 "${an}.zip"
+       ;;
+      *)
+       echo "I don't rename it."
+       ;;
+     esac
+  fi
+}
+
+function zipall_current {
+    IFS="
+"
+    for i in `ls`; do zip -r ${i}.zip $i; done
+}
+
+
+precmd() {
+    hostnam=${HOST##.*}     # wildcard, not regex!
+    usernam=$(whoami)
+    newPWD=${PWD}
+    promptstr="--(${usernam}@${hostnam})-<mm/dd-hh:mm>---(${PWD})--"
+    fillsize=$(( ${COLUMNS} - ${#promptstr} ))
+    if [ $fillsize -ge 0 ]
+    then
+        fill=${(l.${fillsize}..-.)}
+    else
+        fill=""
+        offset=$(( (${fillsize}*(-1)) + 4 ))
+        newPWD="..."${newPWD[${offset},-1]}
+    fi
+}
+
+termwide() {
+    PROMPT=$YELLOW"-"$BLUE"-("$YELLOW"\${usernam}"$LIGHT_BLUE"@"$YELLOW"\${hostnam}"\
+    $BLUE")-<"$YELLOW"%D{%m}"$LIGHT_BLUE"/$YELLOW%D{%d}"$BLUE"-"\
+    $PURPLE"%D{%H}"$LIGHT_BLUE":"$PURPLE"%D{%M}"$BLUE">-"\
+    $YELLOW"-\${fill}"$BLUE"-("$YELLOW"\${newPWD}"$BLUE")-"$YELLOW"-"\
+    $'\n'\
+    $YELLOW"-"$BLUE"-["\
+    $YELLOW"%h"\
+    $BLUE"]"$WHITE"%#"\
+    $'%{\e[0m%} '
+
+    PROMPT2=$LIGHT_BLUE"-"$YELLOW"-"$YELLOW"-"$LIGHT_GRAY$'%{\e[0m%} '
+}
+
