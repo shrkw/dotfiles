@@ -88,3 +88,4 @@ function history-all { history -E 1 }
 
 source ~/.zsh/functions
 source ~/.zsh/aliases
+source ~/.zshenv.local
