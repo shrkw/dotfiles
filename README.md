@@ -17,7 +17,7 @@ git clone https://github.com/shrkw/dotfiles.git && cd dotfiles && ./create_symli
 
 ## Zsh
 
-For storing specific environment configuration, please create following file.
+For storing environment specific configuration, please create following file.
 .zshrc will read this file.
 
     ~/.zshenv.local
