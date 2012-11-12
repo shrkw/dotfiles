@@ -9,6 +9,15 @@ function conv_mp4 { find ~/Downloads/ -depth 1 -type f -name "*.mp4" -exec ffmpe
 function conv_flv { find ~/Downloads/ -depth 1 -type f -name '*.flv' -exec ffmpeg -i {} -acodec copy {}.mp3 \; -exec sleep 2 \; }
 function conv_swf { find ~/Downloads/ -depth 1 -type f -name '*.swf' -exec swfextract -m -o {}.mp3 {} \; }
 
+function format_srlibrary {
+  libxml=~/Library/Application\ Support/Stackroom/Stackroom\ Library.xml
+  convpy=~/Programming/Python2/src/StackRoomLibraryConverter.py
+  cp $libxml ${libxml}.`date +%Y%m%d`
+  python $covpy -v -p $libxml
+  python $covpy -v -t -p ${libxml}.bak
+  python $covpy -v -n -p ${libxml}.bak.bak
+}
+
 function zi {
   cc=`zipinfo -1 $1 | head -1 | nkf -g`
   echo $cc $1
