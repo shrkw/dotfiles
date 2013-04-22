@@ -22,6 +22,7 @@ local DEFAULT=$'%{\e[1;00m%}'
 autoload -U colors
 colors
 setopt prompt_subst
+setopt transient_rprompt
 #PROMPT='%B%{${fg[blue]}%}[%n@%m]%# %{${reset_color}%}%b'
 #RPROMPT='%B%{${fg[blue]}%}[%~]%{${reset_color}%}%b'
 
