@@ -13,3 +13,13 @@ for dotfile in .?*; do
             ;;
     esac
 done
+
+
+# Create site specific files
+for localfile in .gitconfig.local .zshenv.local; do
+    target=$HOME/$localfile
+    if [ -s $target ]
+        then touch $target
+    fi
+done
+

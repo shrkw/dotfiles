@@ -17,10 +17,11 @@ git clone https://github.com/shrkw/dotfiles.git && cd dotfiles && ./create_symli
 
 ## Zsh
 
-For storing environment specific configuration, please create following file.
+Above shell script will create dot local files.
+You can store environment specific configuration.
 `.zshrc` will read this file.
 
-    ~/.zshenv.local
+    $HOME/.zshenv.local
 
 
 ## Vim
