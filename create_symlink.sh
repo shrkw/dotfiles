@@ -8,6 +8,8 @@ for dotfile in .?*; do
             continue;;
         .git)
             continue;;
+        .gitignore)
+            continue;;
         *)
             ln -Fis "$PWD/$dotfile" $HOME
             ;;
@@ -18,7 +20,7 @@ done
 # Create site specific files
 for localfile in .gitconfig.local .zshenv.local; do
     target=$HOME/$localfile
-    if [ -s $target ]
+    if [ ! -s $target ]
         then touch $target
     fi
 done

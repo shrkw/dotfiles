@@ -1,5 +1,7 @@
 [include]
     path = ~/.gitconfig.local
+[color]
+    ui = auto
 [alias]
     st = status
     d1 = diff --color
