@@ -88,6 +88,25 @@ SAVEHIST=100000
 function history-all { history -E 1 }
 
 source ~/.zsh/git-info
+_precmd_prompt() {
+    hostnam=${HOST##.*}     # wildcard, not regex!
+    usernam=$(whoami)
+    newPWD=${PWD}
+    promptstr="--(${usernam}@${hostnam})-<mm/dd-hh:mm>---(${PWD})--"
+    fillsize=$(( ${COLUMNS} - ${#promptstr} ))
+    if [ $fillsize -ge 0 ]
+    then
+        fill=${(l.${fillsize}..-.)}
+    else
+        fill=""
+        offset=$(( (${fillsize}*(-1)) + 4 ))
+        newPWD="..."${newPWD[${offset},-1]}
+    fi
+}
+precmd() {
+    _precmd_prompt
+    _precmd_vcs_info
+}
 source ~/.zsh/functions
 source ~/.zsh/aliases
 source ~/.zshenv.local

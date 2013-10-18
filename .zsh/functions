@@ -1,18 +1,3 @@
-precmd() {
-    hostnam=${HOST##.*}     # wildcard, not regex!
-    usernam=$(whoami)
-    newPWD=${PWD}
-    promptstr="--(${usernam}@${hostnam})-<mm/dd-hh:mm>---(${PWD})--"
-    fillsize=$(( ${COLUMNS} - ${#promptstr} ))
-    if [ $fillsize -ge 0 ]
-    then
-        fill=${(l.${fillsize}..-.)}
-    else
-        fill=""
-        offset=$(( (${fillsize}*(-1)) + 4 ))
-        newPWD="..."${newPWD[${offset},-1]}
-    fi
-}
 
 termwide() {
     PROMPT=$YELLOW"-"$BLUE"-("$YELLOW"\${usernam}"$LIGHT_BLUE"@"$YELLOW"\${hostnam}"\
