@@ -30,7 +30,7 @@ setopt transient_rprompt
 #RPROMPT=' %~'     # prompt for right side of screen
 
 PROMPT=$LIGHT_BLUE'[${USER}@${HOST}] %(!.#.$) '$DEFAULT
-RPROMPT=$LIGHT_BLUE'[${PWD}]'$DEFAULT
+RPROMPT=$LIGHT_BLUE'[%39<...<${PWD}]'$DEFAULT
 
 ####################################################################
 # enable contents assist at default
@@ -87,6 +87,7 @@ HISTSIZE=100000
 SAVEHIST=100000
 function history-all { history -E 1 }
 
+source ~/.zsh/git-info
 source ~/.zsh/functions
 source ~/.zsh/aliases
 source ~/.zshenv.local
