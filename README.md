@@ -3,6 +3,7 @@
 - Zsh
 - GNU Screen
 - Vim
+- Homebrew
 
 ## Installation
 
@@ -32,4 +33,11 @@ I am using Vundle as Plugin manager.
 
     git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git
 
+## Homebrew
 
+```
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+brew bundle
+```
+
+see http://brew.sh/

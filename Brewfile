@@ -7,23 +7,19 @@ install ricty
 brew tap phinze/cask
 install brew-cask
 
-install colordiff
 install tree
 install readline
-install sbt
+install colordiff
+install zsh
+install vim
+install git
 install scala
+install sbt
 
 cask install virtualbox
 cask install vagrant
+cask install google-chrome
+cask install dropbox
+cask install kobito
 
-#install fontconfig
-#install fontforge
-#install freetype
-#install gettext
-#install imagemagick
-#install jpeg
-#install libpng
-#install libtiff
-#install libtool
-#install ossp-uuid
-#install postgresql
+clean
