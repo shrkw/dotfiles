@@ -1,5 +1,6 @@
 autoload -Uz vcs_info
 
+zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' formats '[%b]'
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 _precmd_vcs_info() {
