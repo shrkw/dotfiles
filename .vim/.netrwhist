@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/shrkw/.Xcode'
-let g:netrw_dirhist_2='/Users/shrkw/Programming/flask-gae-template/src'
-let g:netrw_dirhist_3='/Users/shrkw/Programming/Python2/pyfes/pyfes/pyfes'
-let g:netrw_dirhist_4='/Users/shrkw/Programming/flask-gae-template/src/templates'
-let g:netrw_dirhist_5='/Users/shrkw'
-let g:netrw_dirhist_6='/Users/shrkw/Programming'

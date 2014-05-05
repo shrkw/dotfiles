@@ -1,4 +1,5 @@
 .DS_Store
+.netrwhist
 /.zsh/zsh-history
 .vim/bundle
 .vim/plugin
