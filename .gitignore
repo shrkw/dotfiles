@@ -2,3 +2,5 @@
 /.zsh/zsh-history
 .vim/bundle
 .vim/plugin
+.vim/vim_backup
+.vim/vim_swap
