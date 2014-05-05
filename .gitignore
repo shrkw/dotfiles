@@ -1,3 +1,4 @@
 .DS_Store
 /.zsh/zsh-history
-.vim/vundle.git
+.vim/bundle
+.vim/plugin

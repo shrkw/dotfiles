@@ -33,6 +33,7 @@ set backspace=indent,eol,start
 set showmatch
 set wildmenu
 set formatoptions+=mM
+set clipboard+=unnamed
 
 " tab
 " "-----------------------------------------------------------
@@ -144,32 +145,49 @@ map <silent> <F3>   :tabnext<CR>
 "}}}
 
 """"----------------------------------------------------------
-" for vundle
+" for NeoBundle
 " "-----------------------------------------------------------
-set nocompatible
-filetype off
+if has('vim_starting')
+  set nocompatible               " Be iMproved
 
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-" original repos on github
-" Bundle 'tpope/vim-fugitive'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" vim-scripts repos
-" Bundle 'rails.vim'
-Bundle 'neocomplcache'
-Bundle 'unite.vim'
-Bundle 'surround.vim'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
+" My Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 
+" You can specify revision/branch/tag.
+"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
 
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+""""----------------------------------------------------------
 " for neocomplete
 " "-----------------------------------------------------------
-let g:neocomplcache_enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 1
 
+""""----------------------------------------------------------
 " for unite.vim
 " "-----------------------------------------------------------
 " 入力モードで開始する
@@ -196,5 +214,3 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
-
-

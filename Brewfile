@@ -11,7 +11,7 @@ install tree
 install readline
 install colordiff
 install zsh
-install vim
+install vim --with-lua
 install git
 install readline
 install scala

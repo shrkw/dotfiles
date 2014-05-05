@@ -1,5 +1,0 @@
-#!/bin/sh
-APPPATH="/Applications/Vim.app"
-export DYLD_LIBRARY_PATH="$APPPATH/Contents/MacOS/lib" \
-	VIMRUNTIME="$APPPATH/Contents/Resources/vim/runtime"
-exec "$APPPATH/Contents/MacOS/Vim" "$@"
