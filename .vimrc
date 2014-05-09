@@ -1,7 +1,6 @@
 set nocompatible
 
-" display
-" "-----------------------------------------------------------
+" display -----------------------------------------------------------
 syntax on
 "set shortmess+=I
 set list
@@ -17,17 +16,15 @@ set title
 
 set scrolloff=5
 
-set statusline=%<%f\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%4v\ %l/%L
+"set statusline=%<%f\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%4v\ %l/%L
 
-" search
-" "-----------------------------------------------------------
+" search ----------------------------------------------------------
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 
-" edit
-" "-----------------------------------------------------------
+" edit -----------------------------------------------------------
 set autoindent
 set backspace=indent,eol,start
 set showmatch
@@ -35,8 +32,7 @@ set wildmenu
 set formatoptions+=mM
 set clipboard+=unnamed
 
-" tab
-" "-----------------------------------------------------------
+" tab -----------------------------------------------------------
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -45,21 +41,18 @@ set smarttab
 "inoremap <C-Tab> <C-V><Tab>
 
 
-" backup
-" "-----------------------------------------------------------
+" backup -----------------------------------------------------------
 set backup
 set backupdir=~/.vim/vim_backup
 set swapfile
 set directory=~/.vim/vim_swap
 
 
-" nmap
-" "-----------------------------------------------------------
+" nmap -----------------------------------------------------------
 "nmap bb :ls<CR>:buf
 
 
-" encoding
-" "-----------------------------------------------------------
+" encoding -----------------------------------------------------------
 "set enc=utf-8
 "set fencs=iso-2022-jp,euc-jp,cp932
 "set ambiwidth=double
@@ -89,9 +82,7 @@ augroup END
 highlight CursorLine ctermbg=black guibg=black
 highlight CursorColumn ctermbg=black guibg=black
 
-""""----------------------------------------------------------
-" for tab
-" "-----------------------------------------------------------
+" for tab -----------------------------------------------------------
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
@@ -144,9 +135,7 @@ map <silent> <F2>   :tabprevious<CR>
 map <silent> <F3>   :tabnext<CR>
 "}}}
 
-""""----------------------------------------------------------
-" for NeoBundle
-" "-----------------------------------------------------------
+" for NeoBundle -----------------------------------------------------------
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
@@ -169,6 +158,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'itchyny/lightline.vim'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -182,14 +172,10 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-""""----------------------------------------------------------
-" for neocomplete
-" "-----------------------------------------------------------
+" for neocomplete -----------------------------------------------------------
 let g:neocomplete#enable_at_startup = 1
 
-""""----------------------------------------------------------
-" for unite.vim
-" "-----------------------------------------------------------
+" for unite.vim -----------------------------------------------------------
 " 入力モードで開始する
 " let g:unite_enable_start_insert=1
 " バッファ一覧
@@ -214,3 +200,12 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+
+" for lightline ----------------------------------------------------------
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"🔒":""}',
+      \   'modified': '%{&modified?"✏️":""}',
+      \ },
+      \}
+

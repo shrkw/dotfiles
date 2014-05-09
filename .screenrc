@@ -16,14 +16,14 @@ hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
 
 ########################################################################
 # log
-logfile "$HOME/log/screenlog/%H-%Y%m%d-%c-%n.log"
+logfile "$HOME/Logs/screenlog/%H-%Y%m%d-%c-%n.log"
 deflog on
 logtstamp on
 logtstamp after 600
 
 ########################################################################
 # display hardcopy
-hardcopydir "$HOME/log/hardcopy"
+hardcopydir "$HOME/Logs/hardcopy"
 hardcopy_append on
 
 ########################################################################
