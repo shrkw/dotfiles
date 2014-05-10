@@ -30,7 +30,7 @@ set backspace=indent,eol,start
 set showmatch
 set wildmenu
 set formatoptions+=mM
-set clipboard+=unnamed
+"set clipboard+=unnamed
 
 " tab -----------------------------------------------------------
 set tabstop=4
