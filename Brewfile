@@ -7,13 +7,14 @@ install ricty
 brew tap phinze/cask
 install brew-cask
 
-install tree
 install readline
-install colordiff
 install zsh
 install vim --with-lua
+install tmux
+install tree
+install colordiff
 install git
-install readline
+install tig
 install scala
 install sbt
 install unrar
