@@ -1,12 +1,6 @@
 update
 upgrade
 
-tap sanemat/font
-install ricty
-
-brew tap phinze/cask
-install brew-cask
-
 install readline
 install zsh
 install vim --with-lua
@@ -20,6 +14,17 @@ install sbt
 install unrar
 install p7zip
 
+# peco
+tap peco/peco
+install peco
+
+# Ricty font
+tap sanemat/font
+install ricty
+
+# Cask
+brew install caskroom/cask/brew-cask
+
 cask install virtualbox
 cask install vagrant
 cask install firefox
@@ -28,5 +33,6 @@ cask install dropbox
 cask install kobito
 cask install skype
 cask install evernote
+cask install sublime-text
 
 clean

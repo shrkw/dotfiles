@@ -87,6 +87,27 @@ HISTSIZE=100000
 SAVEHIST=100000
 function history-all { history -E 1 }
 
+## peco integration
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+
+####################################################################
+# other
+#
 source ~/.zsh/git-info
 _precmd_prompt() {
     hostnam=${HOST##.*}     # wildcard, not regex!
