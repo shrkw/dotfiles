@@ -2,21 +2,19 @@ set nocompatible
 
 " display -----------------------------------------------------------
 syntax on
-"set shortmess+=I
-set list
 set nu
 set ruler
-set listchars=tab:>-,trail:-,extends:>,precedes:<,eol:$
-"set display=uhex
+set cursorline
+set list
+set listchars=tab:>-,trail:~,extends:>,precedes:<,eol:$
+colorscheme twilight256
 
 set laststatus=2
 set cmdheight=2
 set showcmd
 set title
 
-set scrolloff=5
-
-"set statusline=%<%f\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%4v\ %l/%L
+set scrolloff=10
 
 " search ----------------------------------------------------------
 set hlsearch
@@ -53,9 +51,6 @@ set directory=~/.vim/vim_swap
 
 
 " encoding -----------------------------------------------------------
-"set enc=utf-8
-"set fencs=iso-2022-jp,euc-jp,cp932
-"set ambiwidth=double
 set encoding=utf-8
 set fileencodings=utf-8,utf-16,ucs-2,cp932,euc-jp,iso-2022-jp
 
@@ -70,17 +65,6 @@ autocmd BufNewFile,BufRead app/**/*.rb set ft=ruby fenc=utf-8
 autocmd BufNewFile,BufRead app/**/*.yml set ft=ruby fenc=utf-8
 autocmd FileType c hi Comment ctermfg=darkcyan
 autocmd FileType cpp hi Comment ctermfg=darkcyan
-
-
-" underline at current window
-augroup cch
-  autocmd! cch
-  autocmd WinLeave * set nocursorcolumn nocursorline
-  autocmd WinEnter,BufRead * set cursorcolumn cursorline
-augroup END
-
-highlight CursorLine ctermbg=black guibg=black
-highlight CursorColumn ctermbg=black guibg=black
 
 " for tab -----------------------------------------------------------
 " Anywhere SID.
@@ -139,6 +123,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'grep.vim'
+NeoBundle 'twilight256.vim'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
