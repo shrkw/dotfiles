@@ -2,6 +2,9 @@
 bindkey -e             # emacs key bindings
 # bindkey ' ' magic-space  # also do history expansion on space
 
+# add-zsh-hook for prevention to override precmd
+autoload -Uz add-zsh-hook
+
 ####################################################################
 # local variable
 #
@@ -108,7 +111,15 @@ bindkey '^r' peco-select-history
 ####################################################################
 # other
 #
+_Z_CMD=j
+source ~/.zsh/z/z.sh
+
+####################################################################
+# other
+#
 source ~/.zsh/git-info
+add-zsh-hook precmd _precmd_vcs_info
+
 _precmd_prompt() {
     hostnam=${HOST##.*}     # wildcard, not regex!
     usernam=$(whoami)
@@ -124,10 +135,10 @@ _precmd_prompt() {
         newPWD="..."${newPWD[${offset},-1]}
     fi
 }
-precmd() {
-    _precmd_prompt
-    _precmd_vcs_info
-}
+
+add-zsh-hook precmd _precmd_prompt
+add-zsh-hook precmd _precmd_vcs_info
+
 source ~/.zsh/functions
 source ~/.zsh/aliases
 source ~/.zshenv.local

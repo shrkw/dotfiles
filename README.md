@@ -13,7 +13,7 @@
 git clone https://github.com/shrkw/dotfiles.git && cd dotfiles && ./create_symlink.sh
 ```
 
-`create_symlink.sh` is made by https://github.com/sugyan/dotfiles/blob/master/create_symlink.sh
+`create_symlink.sh` is cloned from https://github.com/sugyan/dotfiles/blob/master/create_symlink.sh
 
 
 ## Zsh
@@ -24,14 +24,13 @@ You can store environment specific configuration.
 
     $HOME/.zshenv.local
 
+### Dependencies
+
+- `git clone git@github.com:rupa/z.git`
 
 ## Vim
 
-###Install Vundle
-
-I am using Vundle as Plugin manager.
-
-    git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git
+I've used NeoBundle as Plugin manager.
 
 ## Homebrew
 
