@@ -19,7 +19,7 @@ setopt magic_equal_subst # directory assist at command option input
 setopt auto_menu # Automatically list choices on an ambiguous completion
 setopt correct # command suggestion at typo
 setopt auto_name_dirs
-setopt auto_remove_slash # 
+setopt auto_remove_slash #
 setopt rm_star_silent
 setopt sun_keyboard_hack
 setopt extended_glob # ファイル名で #, ~, ^ の 3 文字を正規表現として扱う

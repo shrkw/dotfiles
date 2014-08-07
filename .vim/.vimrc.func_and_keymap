@@ -35,6 +35,7 @@ map <silent> [Tag]p :tabprevious<CR>
 map <silent> <F2>   :tabprevious<CR>
 map <silent> <F3>   :tabnext<CR>
 "}}}
+nnoremap gf  <c-w>gF<CR>
 
 " --------------------------------------------------------------------
 " Paste Mode
