@@ -1,0 +1,28 @@
+
+" search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" indent
+set autoindent
+set smartindent
+
+" バックスペースでインデントや改行を削除できるようにする
+set backspace=indent,eol,start
+set showmatch
+
+" completion
+set wildmenu
+
+" tab input
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+
+" 保存時に行末の空白を除去する
+autocmd BufWritePre * :%s/\s\+$//e
+

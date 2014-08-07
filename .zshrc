@@ -39,9 +39,15 @@ setopt auto_cd
 setopt auto_pushd # automatically pushd
 setopt pushd_ignore_dups
 
+autoload -Uz chpwd_recent_dirs cdr
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 5000
+zstyle ':chpwd:*' recent-dirs-default yes
+zstyle ':completion:*' recent-dirs-insert both
+
 # improved cd
-source ~/.zsh/z/z.sh
-_Z_CMD=j
+#source ~/.zsh/z/z.sh
+#_Z_CMD=j
 
 ####################################################################
 # history settings

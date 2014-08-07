@@ -1,0 +1,58 @@
+inoremap jj <Esc>
+
+
+
+
+" user functions -----------------------------------------------------------
+" tab
+" Anywhere SID.
+function! s:SID_PREFIX()
+  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+endfunction
+
+set showtabline=2
+
+" t: tags-and-searches "{{{
+" The prefix key.
+nnoremap    [Tag]   <Nop>
+nmap    t [Tag]
+" Jump.
+" nnoremap [Tag]t  <C-]>
+nnoremap <silent><expr> [Tag]t  &filetype == 'help' ?  "\<C-]>" :
+      \ ":\<C-u>UniteWithCursorWord -buffer-name=tag tag tag/include\<CR>"
+nnoremap <silent><expr> [Tag]p  &filetype == 'help' ?
+      \ ":\<C-u>pop\<CR>" : ":\<C-u>Unite jump\<CR>"
+
+" Tab jump
+for n in range(1, 9)
+  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+endfor
+
+map <silent> [Tag]c :tablast <bar> tabnew<CR>
+map <silent> [Tag]x :tabclose<CR>
+map <silent> [Tag]n :tabnext<CR>
+map <silent> [Tag]p :tabprevious<CR>
+map <silent> <F2>   :tabprevious<CR>
+map <silent> <F3>   :tabnext<CR>
+"}}}
+
+" --------------------------------------------------------------------
+" Paste Mode
+" {{{
+let paste_mode = 0 " 0 = normal, 1 = paste
+
+function! Paste_on_off()
+    if g:paste_mode == 0
+        set paste
+        let g:paste_mode = 1
+    else
+        set nopaste
+        let g:paste_mode = 0
+    endif
+    return
+endfunc
+" }}}
+
+nnoremap <silent> <F10> :call Paste_on_off()<CR>
+set pastetoggle=<F10>
+

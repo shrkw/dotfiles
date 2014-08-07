@@ -1,0 +1,23 @@
+
+set laststatus=2
+set cmdheight=2
+set showcmd
+set title
+
+set backup
+set backupdir=~/.vim/vim_backup
+set swapfile
+set directory=~/.vim/vim_swap
+set autoread
+set hidden
+
+
+set scrolloff=10
+set number
+set ruler
+set cursorline
+set list
+set listchars=tab:>-,trail:~,extends:>,precedes:<,eol:$
+
+set history=1000
+
