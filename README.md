@@ -15,7 +15,6 @@ git clone https://github.com/shrkw/dotfiles.git && cd dotfiles && ./create_symli
 
 `create_symlink.sh` is cloned from https://github.com/sugyan/dotfiles/blob/master/create_symlink.sh
 
-
 ## Zsh
 
 Above shell script will create dot local files.
@@ -24,17 +23,23 @@ You can store environment specific configuration.
 
     $HOME/.zshenv.local
 
-### Dependencies
-
-- `git clone git@github.com:rupa/z.git`
-
 ## Vim
 
 I've used NeoBundle as Plugin manager.
 
+###Install NeoBundle
+
+I am using NeoBundle as Plugin manager.
+
+```bash
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+```
+
+see https://github.com/Shougo/neobundle.vim
+
 ## Homebrew
 
-```
+```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew bundle
 ```
