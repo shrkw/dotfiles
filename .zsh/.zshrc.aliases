@@ -6,6 +6,7 @@ alias -g C='| cat -n'
 alias -g W='| wc'
 alias -g H='| head'
 alias -g T='| tail'
+alias -g p='| peco'
 alias -g ....='../..'
 alias ll='ls -Gl'
 

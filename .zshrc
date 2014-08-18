@@ -14,40 +14,11 @@ source ~/.zsh/.zshrc.prompt
 
 ####################################################################
 # Set shell options
-#
-setopt magic_equal_subst # directory assist at command option input
-setopt auto_menu # Automatically list choices on an ambiguous completion
-setopt correct # command suggestion at typo
-setopt auto_name_dirs
-setopt auto_remove_slash #
-setopt rm_star_silent
-setopt sun_keyboard_hack
-setopt extended_glob # ファイル名で #, ~, ^ の 3 文字を正規表現として扱う
-setopt list_types
-setopt no_beep # no beep
-setopt nolistbeep # no beep when complete list displayed
-setopt always_last_prompt
-setopt cdable_vars
-setopt sh_word_split
-setopt auto_param_keys
-setopt list_packed # compacked complete list display
+source ~/.zsh/.zshrc.basic
 
 ####################################################################
 # change directory settings
-#
-setopt auto_cd
-setopt auto_pushd # automatically pushd
-setopt pushd_ignore_dups
-
-autoload -Uz chpwd_recent_dirs cdr
-add-zsh-hook chpwd chpwd_recent_dirs
-zstyle ':chpwd:*' recent-dirs-max 5000
-zstyle ':chpwd:*' recent-dirs-default yes
-zstyle ':completion:*' recent-dirs-insert both
-
-# improved cd
-#source ~/.zsh/z/z.sh
-#_Z_CMD=j
+source ~/.zsh/.zshrc.cd
 
 ####################################################################
 # history settings
