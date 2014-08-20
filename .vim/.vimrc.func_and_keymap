@@ -20,7 +20,6 @@ nnoremap gf <c-w>gF<CR>
 nnoremap sT :<C-u>Unite tab<CR>
 
 " window ----------------------------------------------------------
-nnoremap s <Nop>
 " Split
 nnoremap ss :split<CR>
 nnoremap sv :vsplit<CR>
