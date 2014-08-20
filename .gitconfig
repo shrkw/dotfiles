@@ -4,6 +4,7 @@
     ui = auto
 [alias]
     logf = log --follow
+    cm = commit
     s = status --branch --short
     st = status --branch --short
     d = diff --color

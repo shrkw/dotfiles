@@ -26,6 +26,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'grep.vim'
 NeoBundle 'twilight256.vim'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'kana/vim-submode'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
