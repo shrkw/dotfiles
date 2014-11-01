@@ -23,7 +23,7 @@ tap sanemat/font
 install ricty
 
 # Cask
-brew install caskroom/cask/brew-cask
+install caskroom/cask/brew-cask
 
 cask install virtualbox
 cask install vagrant

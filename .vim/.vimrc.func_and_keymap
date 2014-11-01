@@ -65,6 +65,6 @@ function! Paste_on_off()
     return
 endfunc
 
-nnoremap <silent> <F10> :call Paste_on_off()<CR>
-set pastetoggle=<F10>
+nnoremap <silent> <F7> :call Paste_on_off()<CR>
+set pastetoggle=<F7>
 
