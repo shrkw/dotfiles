@@ -14,13 +14,9 @@ install sbt
 install unrar
 install p7zip
 
-# peco
-tap peco/peco
-install peco
-
-# Ricty font
-tap sanemat/font
-install ricty
+install peco/peco/peco
+install sanemat/font/ricty
+install motemen/ghq/ghq
 
 # Cask
 install caskroom/cask/brew-cask
@@ -30,9 +26,8 @@ cask install vagrant
 cask install firefox
 cask install google-chrome
 cask install dropbox
-cask install kobito
 cask install skype
-cask install evernote
 cask install sublime-text
+cask install xquartz
 
-clean
+cleanup
