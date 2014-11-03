@@ -21,13 +21,15 @@ install motemen/ghq/ghq
 # Cask
 install caskroom/cask/brew-cask
 
+tap caskroom/homebrew-versions
+
 cask install virtualbox
 cask install vagrant
 cask install firefox
 cask install google-chrome
 cask install dropbox
 cask install skype
-cask install sublime-text
+cask install sublime-text3
 cask install xquartz
 
 cleanup
