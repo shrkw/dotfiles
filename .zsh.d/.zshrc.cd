@@ -1,7 +1,5 @@
-# change directory settings
-
 setopt auto_cd
-setopt auto_pushd # automatically pushd
+setopt auto_pushd
 setopt pushd_ignore_dups
 
 if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then

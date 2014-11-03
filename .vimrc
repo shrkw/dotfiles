@@ -8,10 +8,10 @@ filetype off
 filetype plugin on
 filetype indent on
 
-source ~/.vim/.vimrc.basic
-source ~/.vim/.vimrc.edit
-source ~/.vim/.vimrc.neobundle
-source ~/.vim/.vimrc.func_and_keymap
+source ~/.vim.d/.vimrc.basic
+source ~/.vim.d/.vimrc.edit
+source ~/.vim.d/.vimrc.neobundle
+source ~/.vim.d/.vimrc.func_and_keymap
 
 syntax enable
 colorscheme twilight256

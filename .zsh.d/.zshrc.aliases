@@ -13,3 +13,7 @@ alias ll='ls -Gl'
 alias pd='popd'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 
+# remove safely
+if [[ -x "$(which gmv)" ]];
+  then alias rm='gmv -f --backup=numbered --target-directory ~/.Trash/'
+fi

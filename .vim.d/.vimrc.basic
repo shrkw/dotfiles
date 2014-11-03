@@ -5,9 +5,9 @@ set showcmd
 set title
 
 set backup
-set backupdir=~/.vim/vim_backup
+set backupdir=~/.vim.d/vim_backup
 set swapfile
-set directory=~/.vim/vim_swap
+set directory=~/.vim.d/vim_swap
 set autoread
 set hidden
 

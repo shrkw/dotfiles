@@ -7,26 +7,10 @@ autoload -Uz add-zsh-hook
 # enable contents assist at default
 autoload -U compinit
 compinit
-
-####################################################################
-# prompt settings
-source ~/.zsh/.zshrc.prompt
-
-####################################################################
-# Set shell options
-source ~/.zsh/.zshrc.basic
-
-####################################################################
-# change directory settings
-source ~/.zsh/.zshrc.cd
-
-####################################################################
-# history settings
-source ~/.zsh/.zshrc.history
-
-####################################################################
-# other
-source ~/.zsh/.zshrc.functions
-source ~/.zsh/.zshrc.aliases
+source ~/.zsh.d/.zshrc.prompt
+source ~/.zsh.d/.zshrc.basic
+source ~/.zsh.d/.zshrc.cd
+source ~/.zsh.d/.zshrc.history
+source ~/.zsh.d/.zshrc.functions
+source ~/.zsh.d/.zshrc.aliases
 source ~/.zshenv.local
-

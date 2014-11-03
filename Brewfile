@@ -1,6 +1,7 @@
 update
 upgrade
 
+install coreutils
 install readline
 install zsh
 install vim --with-lua
