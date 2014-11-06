@@ -9,6 +9,7 @@ alias -g T='| tail'
 alias -g p='| peco'
 alias -g ....='../..'
 alias ll='ls -Gl'
+alias la='ls -aGl'
 
 alias pd='popd'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
