@@ -1,5 +1,8 @@
-set nocompatible
 filetype off
+
+augroup default
+  autocmd!
+augroup END
 
 " encoding -----------------------------------------------------------
 "set encoding=utf-8

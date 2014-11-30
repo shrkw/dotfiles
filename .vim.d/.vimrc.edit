@@ -9,7 +9,7 @@ set smartcase
 set autoindent
 set smartindent
 
-" バックスペースでインデントや改行を削除できるようにする
+" remove indent, eol by backspace
 set backspace=indent,eol,start
 set showmatch
 
@@ -23,6 +23,6 @@ set softtabstop=4
 set expandtab
 set smarttab
 
-" 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//e
+" remve trailing white spaces when save
+autocmd default BufWritePre * :%s/\s\+$//e
 
