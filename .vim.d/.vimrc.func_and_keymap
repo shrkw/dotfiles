@@ -28,7 +28,7 @@ nnoremap sh <C-w>h
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
-"   Switch to next
+" Switch to next
 nnoremap sw <C-w>w
 " Move current window
 nnoremap sJ <C-w>J

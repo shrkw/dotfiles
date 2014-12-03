@@ -15,3 +15,4 @@
     lg = !"git lg1"
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = ~/.gitignore_global
