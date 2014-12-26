@@ -29,6 +29,10 @@ NeoBundle 'grep.vim'
 NeoBundle 'twilight256.vim'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'kana/vim-submode'
+NeoBundleLazy "jmcantrell/vim-virtualenv", {
+      \ "autoload": {
+      \   "filetypes": ["python", "python3", "jinja"]
+      \ }}
 NeoBundle "scrooloose/syntastic", {
       \ "build": {
       \   "mac": ["pip install flake8", "npm -g install coffeelint"],
@@ -36,7 +40,7 @@ NeoBundle "scrooloose/syntastic", {
       \ }}
 NeoBundleLazy "davidhalter/jedi-vim", {
       \ "autoload": {
-      \   "filetypes": ["python", "python3", "djangohtml"],
+      \   "filetypes": ["python", "python3", "jinja"],
       \ },
       \ "build": {
       \   "mac": "pip install jedi",
