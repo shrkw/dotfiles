@@ -21,3 +21,4 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,eol:$
 
 set history=1000
 
+set display=lastline

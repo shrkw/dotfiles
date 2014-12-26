@@ -12,6 +12,7 @@ set smartindent
 " remove indent, eol by backspace
 set backspace=indent,eol,start
 set showmatch
+set matchtime=1
 
 " completion
 set wildmenu

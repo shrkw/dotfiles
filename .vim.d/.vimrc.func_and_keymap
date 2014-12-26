@@ -1,5 +1,7 @@
 inoremap jj <Esc>
 
+nnoremap Y y$
+
 " tab -----------------------------------------------------------
 set showtabline=2
 
