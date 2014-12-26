@@ -26,7 +26,7 @@ setopt transient_rprompt
 #PROMPT='[%n@%m]%~%# '    # default prompt
 #RPROMPT=' %~'     # prompt for right side of screen
 
-PROMPT=$LIGHT_BLUE'[${USER}@${HOST}] %(!.#.$) '$DEFAULT
+PROMPT=$LIGHT_BLUE'[${USER%%.*}@${HOST%%.*}] %(!.#.$) '$DEFAULT
 RPROMPT=$LIGHT_BLUE'[%39<...<${PWD}]'$DEFAULT
 
 _precmd_prompt() {
