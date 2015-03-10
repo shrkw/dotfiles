@@ -1,8 +1,8 @@
 ########################################################################
 # general
-escape t
+escape b
 vbell off
-shell zsh
+shell bash
 
 autodetach on
 startup_message off
@@ -16,14 +16,14 @@ hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
 
 ########################################################################
 # log
-logfile "$HOME/Logs/screenlog/%H-%Y%m%d-%c-%n.log"
+logfile "$HOME/.logs/%H-%Y%m%d-%c-%n.log"
 deflog on
 logtstamp on
 logtstamp after 600
 
 ########################################################################
 # display hardcopy
-hardcopydir "$HOME/Logs/hardcopy"
+hardcopydir "$HOME/.logs/hardcopy"
 hardcopy_append on
 
 ########################################################################
