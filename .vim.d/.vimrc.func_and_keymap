@@ -2,6 +2,12 @@ inoremap jj <Esc>
 
 nnoremap Y y$
 
+" vimgrep -------------------------------------------------------
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :<C-u>cfirst<CR>
+nnoremap ]Q :<C-u>clast<CR>
+
 " tab -----------------------------------------------------------
 set showtabline=2
 
