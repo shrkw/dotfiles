@@ -12,7 +12,7 @@ bindkey "^N" history-beginning-search-forward-end
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey '^S' history-incremental-pattern-search-forward
 
-HISTFILE=~/.zsh.d/zsh-history
+HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 function history-all { history -E 1 }
