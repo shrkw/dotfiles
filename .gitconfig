@@ -5,6 +5,7 @@
 [alias]
     logf = log --follow
     cm = commit
+    co = checkout
     s = status --branch --short
     st = status --branch --short
     d = diff --color

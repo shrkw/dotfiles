@@ -1,6 +1,9 @@
 scriptencoding utf-8
 
 " for NeoBundle -----------------------------------------------------------
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
