@@ -1,21 +1,32 @@
 # shrkw’s dotfiles
 
 - Zsh
-- GNU Screen
+- Tmux
 - Vim
 - Homebrew
 
 ## Installation
 
-### Using Git and the bootstrap script
+### Homebrew
 
 ```bash
-git clone https://github.com/shrkw/dotfiles.git && cd dotfiles && ./create_symlink.sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+bash Brewfile.sh
+```
+
+see http://brew.sh/ for further detail
+
+## Config files
+
+### Get dotfiles
+
+```bash
+ghq get https://github.com/shrkw/dotfiles.git && cd ~/.ghq/github.com/shrkw/dotfiles && ./create_symlink.sh
 ```
 
 `create_symlink.sh` is cloned from https://github.com/sugyan/dotfiles/blob/master/create_symlink.sh
 
-## Zsh
+### Zsh
 
 Above shell script will create dot local files.
 You can store environment specific configuration.
@@ -23,13 +34,11 @@ You can store environment specific configuration.
 
     $HOME/.zshenv.local
 
-## Vim
-
-I've used NeoBundle as Plugin manager.
+### Vim
 
 ###Install NeoBundle
 
-I am using NeoBundle as Plugin manager.
+NeoBundle as Plugin manager.
 
 ```bash
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
@@ -37,11 +46,3 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 
 see https://github.com/Shougo/neobundle.vim
 
-## Homebrew
-
-```bash
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-brew bundle
-```
-
-see http://brew.sh/

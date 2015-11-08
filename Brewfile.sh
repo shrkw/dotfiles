@@ -37,3 +37,4 @@ brew cask install google-chrome
 #install sanemat/font/ricty
 
 brew cleanup
+brew cask cleanup

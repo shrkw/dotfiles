@@ -20,7 +20,7 @@ done
 # Create site specific files
 for localfile in .gitconfig.local .zshenv.local; do
     target=$HOME/$localfile
-    if [ ! -s $target ]
+    if [[ ! -s $target ]]
         then touch $target
     fi
 done
