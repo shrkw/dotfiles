@@ -64,7 +64,7 @@ let g:neocomplete#enable_at_startup = 1
 nnoremap [unite] <Nop>
 nmap     <Space>u [unite]
 " バッファ一覧
-nnoremap <silent> [unit]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 " ファイル一覧
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 " レジスタ一覧
