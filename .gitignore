@@ -1,8 +1,9 @@
 .DS_Store
 .netrwhist
+.zsh/zsh-history
 .zsh.d/zsh-history
-.zsh.d/plugins/
-.vim.d/bundle
-.vim.d/plugin
-.vim.d/vim_backup
-.vim.d/vim_swap
+.zsh/plugins/
+.vim/bundle
+.vim/plugin
+.vim/vim_backup
+.vim/vim_swap

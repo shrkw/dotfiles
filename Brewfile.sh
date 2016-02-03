@@ -10,6 +10,7 @@ brew install readline
 brew install zsh
 brew install vim --with-lua
 brew install tmux
+brew install jq
 brew install tree
 brew install colordiff
 brew install git
@@ -28,7 +29,7 @@ brew cask install clipmenu
 brew cask install virtualbox
 brew cask install vagrant
 #cask install firefox
-brew cask install google-chrome
+#brew cask install google-chrome
 #brew cask install dropbox
 #brew cask install skype
 #brew cask install brackets
