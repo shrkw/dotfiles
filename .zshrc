@@ -4,6 +4,8 @@ bindkey -e             # emacs key bindings
 
 # add-zsh-hook for prevention to override precmd
 autoload -Uz add-zsh-hook
+# load zsh-completions
+fpath=(~/.zsh.d/zsh-completions/src $fpath)
 # enable contents assist at default
 autoload -U compinit
 compinit
