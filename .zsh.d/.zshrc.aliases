@@ -14,6 +14,8 @@ alias la='ls -aGl'
 alias pd='popd'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 
+alias grep='grep --color=auto'
+
 # remove safely
 if [[ -x "$(which gmv)" ]];
   then alias rm='gmv -f --backup=numbered --target-directory ~/.Trash/'

@@ -19,6 +19,6 @@ set cursorline
 set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<,eol:$
 
-set history=1000
+set history=200
 
 set display=lastline

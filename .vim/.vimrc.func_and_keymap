@@ -57,9 +57,6 @@ call submode#map('winsize', 'n', '', '<', '<C-w><')
 call submode#map('winsize', 'n', '', '+', '<C-w>+')
 call submode#map('winsize', 'n', '', '-', '<C-w>-')
 
-nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
-nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
-
 " Paste Mode ------------------------------------------------------
 let paste_mode = 0 " 0 = normal, 1 = paste
 function! Paste_on_off()

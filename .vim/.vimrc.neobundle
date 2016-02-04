@@ -27,12 +27,16 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/vimfiler'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'grep.vim'
 NeoBundle 'twilight256.vim'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'scrooloose/syntastic'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -86,6 +90,11 @@ autocmd default FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_
 autocmd default FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 autocmd default FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
+
+
+" for vimfiler ----------------------------------------------------------
+:let g:vimfiler_as_default_explorer = 1
+
 " for lightline ----------------------------------------------------------
 let g:lightline = {
       \ 'mode_map': { 'c': 'NORMAL' },
@@ -124,3 +133,18 @@ function! MyFugitive()
   endif
   return ''
 endfunction
+
+
+" for syntastic ----------------------------------------------------------
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
