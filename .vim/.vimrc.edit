@@ -24,6 +24,9 @@ set softtabstop=4
 set expandtab
 set smarttab
 
+" tabpage
+set tabpagemax=100
+
 " remve trailing white spaces when save
 autocmd default BufWritePre * :%s/\s\+$//e
 

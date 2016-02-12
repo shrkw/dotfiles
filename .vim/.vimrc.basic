@@ -11,6 +11,7 @@ set directory=~/.vim/vim_swap
 set autoread
 set hidden
 
+au VimLeave * mks! ~/.vim.session
 
 set scrolloff=10
 set number
