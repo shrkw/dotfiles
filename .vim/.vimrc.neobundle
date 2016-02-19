@@ -37,6 +37,8 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
