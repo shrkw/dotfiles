@@ -3,21 +3,26 @@
 [color]
     ui = auto
 [alias]
-    logf = log --follow
+    alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+    refresh = !git fetch origin && git remote prune origin
+    conflicts = !git ls-files -u | cut -f 2 | sort -u
     cm = commit
     co = checkout
-    s = status --branch --short
     st = status --branch --short
-    d = diff --color
-    g = grep --line-number --show-function --color --heading --break
-    lp = log --decorate --stat --patch
-    lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-    lg = !"git lg1"
-    lg-f = log --stat --follow
-	conflicts = !git ls-files -u | cut -f 2 | sort -u
+    s = !git st
+    di = diff --color
+    gr = grep --line-number --show-function --color --heading --break
+
+    # log
+    log-oneline = log --graph --oneline --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+    log-stat= log --format=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    log-patch = log --decorate --stat --patch
+
+    # obsolute
+    log1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    log2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 [core]
-	editor = vim -c \"set fenc=utf-8\"
-	excludesfile = ~/.gitignore_global
+    editor = vim -c \"set fenc=utf-8\"
+    excludesfile = ~/.gitignore_global
 [push]
-	default = simple
+    default = simple
