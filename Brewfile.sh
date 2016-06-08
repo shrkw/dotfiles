@@ -10,6 +10,7 @@ brew install readline
 brew install zsh
 brew install vim --with-lua
 brew install tmux
+brew install reattach-to-user-namespace
 brew install jq
 brew install tree
 brew install colordiff

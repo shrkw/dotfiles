@@ -1,4 +1,10 @@
+# override
+alias grep='grep --color=auto'
 alias ls='ls -vG'
+
+alias ll='ls -Gl'
+alias la='ls -aGl'
+
 alias -g L="| $PAGER"
 alias -g M="| $PAGER"
 alias -g G='| grep'
@@ -8,13 +14,11 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g p='| peco'
 alias -g ....='../..'
-alias ll='ls -Gl'
-alias la='ls -aGl'
+alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+alias -g RB='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRANCH>" | head -n 1 | sed "s/^\*\s*//" | sed "s/remotes\/[^\/]*\/\(\S*\)/\1/"`'
 
 alias pd='popd'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
-
-alias grep='grep --color=auto'
 
 # remove safely
 if [[ -x "$(which gmv)" ]];
