@@ -5,7 +5,7 @@ set -e
 brew update
 brew upgrade
 
-FORMULAS=( \
+FORMULAE=( \
 coreutils \
 readline \
 git \
@@ -19,11 +19,11 @@ direnv \
 tmux \
 )
 
-for f in ${FORMULAS[@]}; do
+for f in ${FORMULAE[@]}; do
   brew install $f
 done
 
-CASK_FORMULAS=( \
+CASK_FORMULAE=( \
 google-chrome \
 firefox \
 clipy \
@@ -33,6 +33,6 @@ visual-studio-code \
 the-unarchiver \
 )
 
-for f in ${CASK_FORMULAS[@]}; do
+for f in ${CASK_FORMULAE[@]}; do
   brew cask install $f
 done
