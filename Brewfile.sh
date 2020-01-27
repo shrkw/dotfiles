@@ -6,11 +6,17 @@ brew update
 brew upgrade
 
 FORMULAS=( \
-coreutils readline \
+coreutils \
+readline \
+git \
+tig \
+peco \
+ghq \
+colordiff \
+tree \
+jq \
+direnv \
 tmux \
-git tig peco ghq \
-colordiff tree \
-jq direnv \
 )
 
 for f in ${FORMULAS[@]}; do
