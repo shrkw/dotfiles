@@ -11,17 +11,32 @@
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-bash Brewfile.sh
 ```
 
 see http://brew.sh/ for further detail
 
+### Install ghq, fetch dotfiles and Install Formulae
+
+```bash
+# Install Repository manager
+brew install ghq
+ghq get https://github.com/shrkw/dotfiles.git
+
+# Install Apps via Homebrew
+bash ~/ghq/github.com/shrkw/dotfiles/Brewfile.sh
+```
+
 ## Config files
+
+
+```bash
+cd ~/ghq/github.com/shrkw/dotfiles
+```
 
 ### Get dotfiles
 
 ```bash
-ghq get https://github.com/shrkw/dotfiles.git && cd ~/.ghq/github.com/shrkw/dotfiles && ./create_symlink.sh
+bash create_symlink.sh
 ```
 
 `create_symlink.sh` is cloned from https://github.com/sugyan/dotfiles/blob/master/create_symlink.sh
