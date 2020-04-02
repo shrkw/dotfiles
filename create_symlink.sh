@@ -10,6 +10,10 @@ for dotfile in .?*; do
             continue;;
         .gitignore)
             continue;;
+        .gitmodules)
+            continue;;
+        .git-templates)
+            continue;;
         *)
             ln -Fis "$PWD/$dotfile" $HOME
             ;;
