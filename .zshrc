@@ -4,11 +4,6 @@ bindkey -e             # emacs key bindings
 
 # add-zsh-hook for prevention to override precmd
 autoload -Uz add-zsh-hook
-# load zsh-completions
-fpath=(~/.zsh.d/zsh-completions/src $fpath)
-# enable contents assist at default
-autoload -U compinit
-compinit
 source ~/.zsh.d/.zshrc.prompt
 source ~/.zsh.d/.zshrc.basic
 source ~/.zsh.d/.zshrc.cd
@@ -16,3 +11,11 @@ source ~/.zsh.d/.zshrc.history
 source ~/.zsh.d/.zshrc.functions
 source ~/.zsh.d/.zshrc.aliases
 source ~/.zshenv.local
+
+# load zsh-completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi

@@ -17,6 +17,7 @@ tree \
 jq \
 direnv \
 tmux \
+zsh-completions \
 )
 
 for f in ${FORMULAE[@]}; do
