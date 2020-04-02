@@ -47,16 +47,6 @@ nnoremap sH <C-w>H
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 
-" Change window size
-call submode#enter_with('winsize', 'n', '', 's>', '<C-w>>')
-call submode#enter_with('winsize', 'n', '', 's<', '<C-w><')
-call submode#enter_with('winsize', 'n', '', 's+', '<C-w>+')
-call submode#enter_with('winsize', 'n', '', 's-', '<C-w>-')
-call submode#map('winsize', 'n', '', '>', '<C-w>>')
-call submode#map('winsize', 'n', '', '<', '<C-w><')
-call submode#map('winsize', 'n', '', '+', '<C-w>+')
-call submode#map('winsize', 'n', '', '-', '<C-w>-')
-
 " Paste Mode ------------------------------------------------------
 let paste_mode = 0 " 0 = normal, 1 = paste
 function! Paste_on_off()

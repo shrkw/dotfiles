@@ -12,9 +12,7 @@ filetype plugin indent on
 
 source ~/.vim/.vimrc.basic
 source ~/.vim/.vimrc.edit
-source ~/.vim/.vimrc.neobundle
 source ~/.vim/.vimrc.func_and_keymap
 
 syntax enable
-colorscheme twilight256
 
