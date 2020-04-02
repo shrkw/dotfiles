@@ -1,11 +1,7 @@
 [include]
     path = ~/.gitconfig.local
-[color]
-    ui = auto
-    status = auto
-    diff = auto
-    branch = auto
-    interactive = auto
+[push]
+    default = simple
 [alias]
     alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
     refresh = !git fetch origin && git remote prune origin
@@ -29,12 +25,3 @@
     # obsolute
     log1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     log2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-[core]
-    editor = vim -c \"set fenc=utf-8\"
-    excludesfile = ~/.gitignore_global
-[init]
-	templatedir = ~/.git-templates
-[push]
-    default = simple
-[commit]
-	template = ~/.git-templates/commit_template
