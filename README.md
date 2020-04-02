@@ -7,47 +7,26 @@
 
 ## Installation
 
-### Homebrew
-
 ```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-see http://brew.sh/ for further detail
-
-### Install ghq, fetch dotfiles and Install Formulae
-
-```bash
-# Install Repository manager
+# Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install ghq
 ghq get https://github.com/shrkw/dotfiles.git
+cd ~/ghq/github.com/shrkw/dotfiles
+./install.sh
 
-# Install Apps via Homebrew
 bash ~/ghq/github.com/shrkw/dotfiles/Brewfile.sh
 ```
 
 ## Config files
 
-
-```bash
-cd ~/ghq/github.com/shrkw/dotfiles
-```
-
-### Get dotfiles
-
-```bash
-bash create_symlink.sh
-```
-
-`create_symlink.sh` is cloned from https://github.com/sugyan/dotfiles/blob/master/create_symlink.sh
-
 ### Zsh
 
 Above shell script will create dot local files.
-You can store environment specific configuration.
-`.zshrc` will read this file.
+You can store site specific configuration.
+`.zshrc` includes this file.
 
-    $HOME/.zshenv.local
+$HOME/.zshenv.local
 
 ### Vim
 
