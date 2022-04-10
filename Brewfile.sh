@@ -18,6 +18,7 @@ jq \
 direnv \
 tmux \
 zsh-completions \
+trash \
 )
 
 for f in ${FORMULAE[@]}; do
