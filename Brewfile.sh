@@ -19,6 +19,7 @@ direnv \
 tmux \
 zsh-completions \
 trash \
+rename \
 )
 
 for f in ${FORMULAE[@]}; do
