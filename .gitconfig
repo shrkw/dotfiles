@@ -6,6 +6,7 @@
     alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
     refresh = !git fetch origin && git remote prune origin
     ps-here = !git push origin `git rev-parse --abbrev-ref HEAD`
+    ps-here-f = !git push --force-with-lease origin `git rev-parse --abbrev-ref HEAD
     pl-here = !git pull origin `git rev-parse --abbrev-ref HEAD`
     conflicts = !git ls-files -u | cut -f 2 | sort -u
     cm = commit
@@ -25,3 +26,12 @@
     # obsolute
     log1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     log2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+[init]
+	defaultBranch = main
+# [gpg] # need git 2.34 or newer
+#      format = ssh
+#[gpg "ssh"]
+#      program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+#[commit]
+#      gpgsign = true
+
