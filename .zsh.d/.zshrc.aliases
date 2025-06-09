@@ -22,5 +22,5 @@ alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 
 # remove safely
 if type trash > /dev/null 2>&1; then
-    alias rm='trash -F'
+    alias rm='trash'
 fi
