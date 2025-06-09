@@ -15,7 +15,7 @@ for dotfile in .?*; do
         .git-templates)
             continue;;
         *)
-            ln -Fis "$PWD/$dotfile" $HOME
+            ln -Fis "$PWD/$dotfile" $HOME/$dotfile
             ;;
     esac
 done
