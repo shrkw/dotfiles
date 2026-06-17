@@ -13,9 +13,15 @@ source ~/.zsh.d/.zshrc.aliases
 source ~/.zshenv.local
 
 # load zsh-completions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+if [[ -d ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-completions ]]; then
+  fpath=("${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-completions" $fpath)
 
   autoload -Uz compinit
-  compinit
+  zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+  zcompdump_old=(${zcompdump}(N.mh+24))
+  if [[ ! -s "$zcompdump" ]] || (( $#zcompdump_old )); then
+    compinit -d "$zcompdump"
+  else
+    compinit -C -d "$zcompdump"
+  fi
 fi
